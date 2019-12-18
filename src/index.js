@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Card from './Components/Card';
+import Card from './components/Card.js';
+import 'bootstrap/dist/css/bootstrap.css';
 
 /* Creacion de componentes a traves de funcionesJS -> getGreeting() */
 
