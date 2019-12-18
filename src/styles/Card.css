@@ -1,7 +1,7 @@
 .card {
     border: none;
     border-radius: 8px;
-    background: url('../images/The1984.png') no-repeat, linear-gradient(to right, #A74CF2, #617BFB);
+    /* background: linear-gradient(to right, #A74CF2, #617BFB); */
 }
 .tamaño-img {
     height: 100px;

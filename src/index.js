@@ -25,4 +25,9 @@ import 'bootstrap/dist/css/bootstrap.css';
 // const elemento = <h1>Hola, {user.name} {user.lastName} ({iniciales}) - {user.mark}</h1>;
 const contenedor = document.getElementById('root');
 
-ReactDOM.render(/*getGreeting(user)*/<Card/>, contenedor);
+ReactDOM.render(/*getGreeting(user)*/<Card
+                                        title='The1984'
+                                        description='Ser honesto es lo importante.'
+                                        leftColor='#A74CF2'
+                                        rightColor='#617BFB'
+                                    />, contenedor);
