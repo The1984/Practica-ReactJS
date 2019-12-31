@@ -29,5 +29,4 @@ ReactDOM.render(/*getGreeting(user)*/<Card
                                         title='The1984'
                                         description='Ser honesto es lo importante.'
                                         leftColor='#A74CF2'
-                                        rightColor='#617BFB'
-                                    />, contenedor);
+                                        rightColor='#617BFB'                                   />, contenedor);
