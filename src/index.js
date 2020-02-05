@@ -1,7 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import 'bootstrap/dist/css/bootstrap.css';
-import Home from './pages/Home.js';
+import Exercises from './pages/Exercises.js';
+
 /* Creacion de componentes a traves de funcionesJS -> getGreeting() */
 
 // const user = 
@@ -26,6 +27,6 @@ const contenedor = document.getElementById('root');
 
 ReactDOM.render
 (/*getGreeting(user)*/
-    <Home/>,
+    <Exercises/>,
     contenedor
 );
