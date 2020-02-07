@@ -1,6 +1,7 @@
 import React from 'react'
 import ExerciseList from '../components/ExerciseList.js';
 import Wellcome from '../components/Wellcome.js';
+import AddExercise from '../components/AddExercise.js';
 
 class Exercises extends React.Component
 {
@@ -44,6 +45,7 @@ class Exercises extends React.Component
                 <ExerciseList
                     exercises={this.state.data}    
                 />
+                <AddExercise/>
             </div>
         )
     }

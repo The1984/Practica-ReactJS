@@ -1,0 +1,11 @@
+
+.tamaño-img {
+    height: 100px;
+    width: 100px;
+}
+
+.center-img
+{
+    display: block;
+    margin: auto;
+}
