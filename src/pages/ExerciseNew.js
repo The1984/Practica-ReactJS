@@ -1,100 +1,46 @@
 import React from 'react'
+import ExcerciseForm from '../components/ExerciseForm.js'
+import Card from '../components/Card.js'
 
 class ExerciseNew extends React.Component
 {
-    //Pasa propiedades. Hace un enlace (bind).
-    // constructor(props)
-    // {
-    //     super(props);
-    //     this.handleClick = this.handleClick.bind(this);
-    // }
 
-    // handleClick()
-    // {
-    //     console.log(this)
-    // }
-
-    // Equivalente para pasar props.
-    state = {}
+    state = {
+        form : {
+            title : '',
+            description : '', 
+            img : '',
+            leftColor : '',
+            rightColor : ''
+            
+        }
+    }
 
     handleChange = e =>
     {
-        this.setState({[e.target.name] : e.target.value})
-    }
-
-    handleSubmit = e =>
-    {
-        e.preventDefault()
-        console.log(this.state);
+        this.setState({
+            form : {
+                ...this.state.form, //permite no sobre escribir lo que ya tenia antes.
+                [e.target.name] : e.target.value
+            }
+        })
     }
 
     render()
     {
         return(
-            <div className="container">
-                <form
-                    onSubmit={this.handleSubmit}
-                >
-                    <div className="form-group">
-                        <input
-                            type="text"
-                            className="form-control"
-                            placeholder="title"
-                            name="title"
-                            onChange={this.handleChange}
-                            value={this.state.title}
-                        />
-                    </div>
-                    <div className="form-group">
-                        <input
-                            type="text"
-                            className="form-control"
-                            placeholder="description"
-                            name="description"
-                            onChange={this.handleChange}
-                            value={this.state.description}
-                        />
-                    </div>
-                    <div className="form-group">
-                        <input
-                            type="text"
-                            className="form-control"
-                            placeholder="img"
-                            name="img"
-                            onChange={this.handleChange}
-                            value={this.state.img}
-                        />
-                    </div>
-                    <div className="form-row">
-                        <div className="col">
-                            <input
-                                type="text"
-                                className="form-control"
-                                placeholder="leftColor"
-                                name="leftColor"
-                                onChange={this.handleChange}
-                                value={this.state.leftColor}
-                            />
-                        </div>
-                        <div className="col">
-                            <input
-                                type="text"
-                                className="form-control"
-                                placeholder="rightColor"
-                                name="rightColor"
-                                onChange={this.handleChange}
-                                value={this.state.rightColor}    
-                            />
-                        </div>
-                    </div>
-                    <button
-                        type="submit"
-                        className="btn btn-primary" 
-                        onClick={this.handleClick}
-                    >
-                        Submit
-                    </button>
-                </form>
+            <div className="row">
+                <div className="col-sm">
+                    <Card
+                        {...this.state.form}
+                    />
+                </div>
+                <div className="col-sm">
+                    <ExcerciseForm
+                        onChange={this.handleChange}
+                        form={this.state.form}
+                    />
+                </div>
             </div>
         )
     }

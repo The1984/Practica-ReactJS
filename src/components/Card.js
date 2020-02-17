@@ -8,28 +8,28 @@ class Card extends React.Component
     constructor(props)
     {
         super(props);
-        this.state = {
-            img : props.img
-        }
+        // this.state = {
+        //     img : props.img
+        // }
         // this.state =
         // {
         //     image : 'https://rea.ceibal.edu.uy/elp/tradicional_uruguayo_y_comestible/953-200.png'
         // }
     }
 
-    componentDidMount() {
-        setTimeout(() => 
-        {
-            this.setState 
-            ({
-                img : 'https://cdn.iconscout.com/icon/premium/png-256-thumb/mate-553001.png'
-            })
-        },5000)
-    }
+    // componentDidMount() {
+    //     setTimeout(() => 
+    //     {
+    //         this.setState 
+    //         ({
+    //             img : 'https://cdn.iconscout.com/icon/premium/png-256-thumb/mate-553001.png'
+    //         })
+    //     },5000)
+    // }
 
     render(){
 
-        const {title, description} = this.props;
+        const {title, description, img} = this.props;
         return(
             <div className="card mx-auto Fitness-Card"
             style={{
@@ -38,7 +38,7 @@ class Card extends React.Component
                 <div className="card-body">
                     <div className="row center">
                         <div className="col-6">
-                            <img src={this.state.img} className="float-right tamaño-img" alt=""/>
+                            <img src={img} className="float-right tamaño-img" alt=""/>
                         </div>
                         <div className="col-6 Fitness-Card-Info">
                             <h1>{title}</h1>
