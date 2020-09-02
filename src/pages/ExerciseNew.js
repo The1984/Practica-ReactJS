@@ -1,6 +1,8 @@
 import React from 'react'
 import ExcerciseForm from '../components/ExerciseForm.js'
 import Card from '../components/Card.js'
+import Loading from '../components/Loading.js'
+import FatalError from './500.js'
 
 class ExerciseNew extends React.Component
 {
@@ -13,10 +15,18 @@ class ExerciseNew extends React.Component
             leftColor : '',
             rightColor : ''
             
-        }
+        },
+        loading: false,
+        error: null
+
     }
 
     handleSubmit = async e => {
+        
+        this.setState({
+            loading: true
+        })
+
         e.preventDefault()
         try {
             let config = {
@@ -30,8 +40,17 @@ class ExerciseNew extends React.Component
             let res = await fetch('http://localhost:8000/api/exercises', config)
             let json = await res.json()
             console.log(json)
-        } catch (error) {
 
+            this.setState({
+                loading: false
+            })
+
+            this.props.history.push('/exercise')
+        } catch (error) {
+            this.setState({
+                loading: false,
+                error
+            })
         }
     }
 
@@ -47,6 +66,11 @@ class ExerciseNew extends React.Component
 
     render()
     {
+        if(this.state.error)
+        {
+            return <FatalError/>
+        }
+
         return(
             <div className="row">
                 <div className="col-sm">
