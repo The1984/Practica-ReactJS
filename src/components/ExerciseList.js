@@ -4,7 +4,7 @@ import Card from './Card.js'
 const ExerciseList = ({exercises}) => (
     exercises.map((Exercises) => {
         return (
-            <div>
+            <React.Fragment>
                 <Card
                 key={Exercises.id}
                 title={Exercises.title}
@@ -13,7 +13,7 @@ const ExerciseList = ({exercises}) => (
                 rightColor={Exercises.rightColor}
                 img={Exercises.img}
                 />            
-            </div>
+            </React.Fragment>
         )
     })
 )

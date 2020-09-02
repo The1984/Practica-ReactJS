@@ -83,7 +83,7 @@ class Exercises extends React.Component
         }
             
         return(
-            <div>
+            <React.Fragment>
                 <Wellcome
                 name='Javier Ramos'
                 />
@@ -91,7 +91,7 @@ class Exercises extends React.Component
                     exercises={this.state.data} 
                 />
                 <AddExercise/>
-            </div>
+            </React.Fragment>
         )
     }
 }
