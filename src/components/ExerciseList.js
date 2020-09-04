@@ -2,16 +2,17 @@ import React from 'react'
 import Card from './Card.js'
 
 const ExerciseList = ({exercises}) => (
-    exercises.map((Exercises) => {
+    exercises.map((exercise) => {
         return (
             <React.Fragment>
                 <Card
-                key={Exercises.id}
-                title={Exercises.title}
-                description={Exercises.description}
-                leftColor={Exercises.leftColor}
-                rightColor={Exercises.rightColor}
-                img={Exercises.img}
+                key={exercise.id}
+                // title={exercise.title}
+                // description={exercise.description}
+                // leftColor={exercise.leftColor}
+                // rightColor={exercise.rightColor}
+                // img={exercise.img}
+                {...exercise}
                 />            
             </React.Fragment>
         )
