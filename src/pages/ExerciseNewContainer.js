@@ -74,8 +74,7 @@ class ExerciseNewContainer extends React.Component
               form={this.state.form}
               onChange={this.handleChange}
               onSubmit={this.handleSubmit}
-              />
-        
+              />        
     }
 
 }
